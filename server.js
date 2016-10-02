@@ -12,6 +12,12 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,'article-one.html'));
    
 });
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter+1;
+    res.send(counter.testString());
+});
+
 app.get('/article2',function(req,res){
 res.sendFile(path.join(__dirname,'article2.html'));
     
